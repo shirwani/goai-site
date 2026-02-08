@@ -1,3 +1,41 @@
-#ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai'
 
-scp -r .                       root@23.239.11.82:/var/www/flask-apps/goai
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/about'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/app-store-optimization'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/contact'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/data-driven-marketing-analytics'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/design-and-development-2'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/faq'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/marketing-and-advertising'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/mobile-app-development'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/reputation-management'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/seo'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/social-media-management'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/website-development'
+
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/assets/css'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/assets/img'
+ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai/assets/js'
+
+scp 404.html        root@23.239.11.82:/var/www/flask-apps/goai/.
+scp about/*.html    root@23.239.11.82:/var/www/flask-apps/goai/.
+scp index.html      root@23.239.11.82:/var/www/flask-apps/goai/.
+scp sitemap.xml     root@23.239.11.82:/var/www/flask-apps/goai/.
+scp README.md       root@23.239.11.82:/var/www/flask-apps/goai/.
+
+scp assets/css/*.css    root@23.239.11.82:/var/www/flask-apps/goai/assets/css/.
+scp assets/img/*.*      root@23.239.11.82:/var/www/flask-apps/goai/assets/img/.
+scp assets/js/*.js      root@23.239.11.82:/var/www/flask-apps/goai/assets/js/.
+
+scp about/*.html                            root@23.239.11.82:/var/www/flask-apps/goai/about/.
+scp app-store-optimization/*.html           root@23.239.11.82:/var/www/flask-apps/goai/app-store-optimization/.
+scp contact/*.html                          root@23.239.11.82:/var/www/flask-apps/goai/contact/.
+scp data-driven-marketing-analytics/*.html  root@23.239.11.82:/var/www/flask-apps/goai/data-driven-marketing-analytics/.
+scp design-and-development-2/*.html         root@23.239.11.82:/var/www/flask-apps/goai/design-and-development-2/.
+scp faq/*.html                              root@23.239.11.82:/var/www/flask-apps/goai/faq/.
+scp marketing-and-advertising/*.html        root@23.239.11.82:/var/www/flask-apps/goai/marketing-and-advertising/.
+scp mobile-app-development/*.html           root@23.239.11.82:/var/www/flask-apps/goai/mobile-app-development/.
+scp reputation-management/*.html            root@23.239.11.82:/var/www/flask-apps/goai/reputation-management/.
+scp seo/*.html                              root@23.239.11.82:/var/www/flask-apps/goai/seo/.
+scp social-media-management/*.html          root@23.239.11.82:/var/www/flask-apps/goai/social-media-management/.
+scp website-development/*.html              root@23.239.11.82:/var/www/flask-apps/goai/website-development/.
