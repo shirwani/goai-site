@@ -1,0 +1,3 @@
+#ssh root@23.239.11.82 'mkdir -p /var/www/flask-apps/goai'
+
+scp -r .                       root@23.239.11.82:/var/www/flask-apps/goai

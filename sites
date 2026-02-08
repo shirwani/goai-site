@@ -1,0 +1,126 @@
+########################################################################################################################
+# FLASK SITES
+########################################################################################################################
+
+server {
+    server_name 23.239.11.82 zakishirwani.com www.zakishirwani.com;
+    location /chat-server/ {
+        add_header Access-Control-Allow-Origin "*" always;
+        add_header Access-Control-Allow-Methods "GET, OPTIONS" always;
+        add_header Access-Control-Allow-Headers "Content-Type, Accept" always;
+        add_header Vary "Origin" always;
+        if ($request_method = OPTIONS) {
+            return 204;
+        }
+        proxy_pass http://127.0.0.1:8001/; # Update port number
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/zakishirwani.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/zakishirwani.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    server_name chatbot.zakishirwani.com www.chatbot.zakishirwani.com;
+    location / {
+        proxy_pass http://127.0.0.1:8001/; # Update port number
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        add_header Access-Control-Allow-Origin "*" always;
+        add_header Access-Control-Allow-Methods "GET, OPTIONS" always;
+        add_header Access-Control-Allow-Headers "Content-Type, Accept" always;
+        add_header Vary "Origin" always;
+        if ($request_method = OPTIONS) {
+            return 204;
+        }
+    }
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/zakishirwani.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/zakishirwani.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    server_name QuickResponseElectricalService.zakishirwani.com www.QuickResponseElectricalService.zakishirwani.com;
+    location / {
+        proxy_pass http://127.0.0.1:6001/; # Update port number
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        location /static/ {
+            alias /var/www/flask-apps/QuickResponseElectricalService/static/; # Update location
+            add_header Cache-Control "public";
+        }
+    }
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/quickresponseelectricalservice.zakishirwani.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/quickresponseelectricalservice.zakishirwani.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    server_name puntacana.zakishirwani.com www.puntacana.zakishirwani.com;
+    location / {
+        proxy_pass http://127.0.0.1:5001/; # Update port number
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        location /static/ {
+            alias /var/www/flask-apps/SampleFlaskAppOnLinode/static; # Update location
+        }
+    }
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/zakishirwani.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/zakishirwani.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+
+
+########################################################################################################################
+# STATIC SITES
+########################################################################################################################
+
+server {
+    listen 80;
+    server_name goai.zakishirwani.com www.goai.zakishirwani.com;
+    root /var/www/flask-apps/goai;
+    index index.html;
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/zakishirwani.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/zakishirwani.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.zakishirwani.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+    if ($host = zakishirwani.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+    server_name 23.239.11.82 zakishirwani.com www.zakishirwani.com;
+    listen 80;
+    return 404; # managed by Certbot
+}
+
+server {
+    if ($host = puntacana.zakishirwani.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+    server_name puntacana.zakishirwani.com www.puntacana.zakishirwani.com;
+    listen 80;
+    return 404; # managed by Certbot
+}
