@@ -610,6 +610,9 @@ body{
 #services a .card-surface{
   transition: background-color .18s ease, border-color .18s ease;
 }
+#services .service-card-tagline{
+  color: var(--goai-primary);
+}
 #services a:hover .card-surface,
 #services a:focus-visible .card-surface{
   background: #f4f4f4;
