@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% set active_page = 'contact' %}
+
+{% block title %}Contact - GoAI{% endblock %}
+{% block meta_description %}Contact Welcome to GoAI Marketing Services! Book a call We'd love to hear from you!{% endblock %}
+{% block og_title %}Contact - GoAI{% endblock %}
+{% block og_description %}Contact Welcome to GoAI Marketing Services! Book a call We'd love to hear from you!{% endblock %}
+{% block twitter_title %}Contact - GoAI{% endblock %}
+{% block twitter_description %}Contact Welcome to GoAI Marketing Services! Book a call We'd love to hear from you!{% endblock %}
+
+{% block content %}
+  <main id="main" class="container">
+    <section class="hero hero--sharp hero--contact-banner p-4 p-md-5 mt-4">
+      <div class="position-relative">
+        <div class="section-kicker mb-2">GoAI</div>
+        <h1 class="display-6 fw-semibold mb-2">Contact</h1>
+        <p class="lead text-secondary mb-0">Let's Turn your Ideas into Reality</p>
+        <div class="mt-3">
+          <a class="btn btn-primary" href="#contact-form">Book a call</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="card card-surface"><div class="card-body">
+            <div class="fw-semibold mb-2">Welcome to GoAI Marketing Services!</div>
+            <p class="text-secondary">We'd love to hear from you!</p>
+            <div class="d-grid gap-2">
+              <a class="btn btn-primary" href="mailto:contact@goaimarketingservices.com">Book a call</a>
+              <a class="btn btn-outline-light" href="mailto:contact@goaimarketingservices.com">Email us: contact@goaimarketingservices.com</a>
+            </div>
+            <hr class="border-white border-opacity-10 my-4">
+            <div class="fw-semibold">Locate Us</div>
+            <div class="text-secondary">4732 Farm to Market 2920 Rd<br>PMB 1011<br>Spring TX 77388<br>United States</div>
+            <div class="text-secondary mt-2">+1 (281) 670-9840</div>
+          </div></div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="card card-surface"><div class="card-body">
+            <div class="fw-semibold mb-1">Let's Turn your Ideas into Reality</div>
+            <p class="text-secondary">Please enable JavaScript in your browser to complete this form.</p>
+            <form id="contact-form" data-contact-form>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label">Name *</label>
+                  <input class="form-control" name="name" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label">Email Address *</label>
+                  <input class="form-control" name="email" type="email" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Your Budget</label>
+                  <input class="form-control" name="budget" placeholder="">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" name="description" rows="5"></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

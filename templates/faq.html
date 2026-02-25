@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% set active_page = 'faq' %}
+
+{% block title %}FAQ - GoAI{% endblock %}
+{% block meta_description %}Frequently asked questions about GoAI, our AI agents, workflow automation, integrations, and getting started.{% endblock %}
+{% block og_title %}FAQ - GoAI{% endblock %}
+{% block og_description %}Frequently asked questions about GoAI, our AI agents, workflow automation, integrations, and getting started.{% endblock %}
+{% block twitter_title %}FAQ - GoAI{% endblock %}
+{% block twitter_description %}Frequently asked questions about GoAI, our AI agents, workflow automation, integrations, and getting started.{% endblock %}
+
+{% block content %}
+
+  <main id="main" class="container">
+    <section class="hero hero--sharp hero--faq-banner p-4 p-md-5 mt-4">
+      <div class="position-relative">
+        <div class="section-kicker mb-2">GoAI</div>
+        <h1 class="display-6 fw-semibold mb-2">Frequently Asked Questions</h1>
+        <p class="lead text-secondary mb-0">Quick answers about GoAI, AI agents, automation, integrations, and getting started.</p>
+        <div class="mt-3">
+          <a class="btn btn-primary" href="/contact/">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-10">
+          <div class="card card-surface">
+            <div class="card-body">
+              <div class="section-kicker">FAQ</div>
+
+              <h2 class="h5 fw-semibold mt-3 mb-2" id="general-information">General Information</h2>
+              <div class="accordion mb-4" id="faqGeneral">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGeneralH1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqGeneralC1" aria-expanded="true" aria-controls="faqGeneralC1">
+                      What is GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqGeneralC1" class="accordion-collapse collapse show" aria-labelledby="faqGeneralH1" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body text-secondary">GoAI is an advanced AI automation platform designed to help businesses streamline workflows, improve efficiency, and integrate artificial intelligence into their daily operations without requiring extensive technical expertise.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGeneralH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqGeneralC2" aria-expanded="false" aria-controls="faqGeneralC2">
+                      What is the primary mission of GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqGeneralC2" class="accordion-collapse collapse" aria-labelledby="faqGeneralH2" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body text-secondary">The mission is to empower businesses to bridge the gap between human potential and artificial intelligence, making sophisticated AI tools accessible and actionable for various industries.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGeneralH3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqGeneralC3" aria-expanded="false" aria-controls="faqGeneralC3">
+                      Does GoAI offer custom solutions?
+                    </button>
+                  </h3>
+                  <div id="faqGeneralC3" class="accordion-collapse collapse" aria-labelledby="faqGeneralH3" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body text-secondary">Yes. GoAI specializes in building tailored AI agents and automated workflows that are specific to the unique needs of a business.</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 fw-semibold mt-4 mb-2" id="services-features">Services &amp; Features</h2>
+              <div class="accordion mb-4" id="faqServices">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqServicesH1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqServicesC1" aria-expanded="false" aria-controls="faqServicesC1">
+                      What are "AI Agents"?
+                    </button>
+                  </h3>
+                  <div id="faqServicesC1" class="accordion-collapse collapse" aria-labelledby="faqServicesH1" data-bs-parent="#faqServices">
+                    <div class="accordion-body text-secondary">AI Agents are specialized digital assistants created by GoAI that can perform specific tasks, such as lead generation, customer support, or data analysis, autonomously or with minimal human intervention.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqServicesH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqServicesC2" aria-expanded="false" aria-controls="faqServicesC2">
+                      Can GoAI help with customer support?
+                    </button>
+                  </h3>
+                  <div id="faqServicesC2" class="accordion-collapse collapse" aria-labelledby="faqServicesH2" data-bs-parent="#faqServices">
+                    <div class="accordion-body text-secondary">Yes. The platform offers 24/7 AI-driven customer support solutions that can handle inquiries, resolve common issues, and escalate complex problems to human team members when necessary.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqServicesH3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqServicesC3" aria-expanded="false" aria-controls="faqServicesC3">
+                      Does GoAI integrate with existing tools?
+                    </button>
+                  </h3>
+                  <div id="faqServicesC3" class="accordion-collapse collapse" aria-labelledby="faqServicesH3" data-bs-parent="#faqServices">
+                    <div class="accordion-body text-secondary">Yes. GoAI is designed to integrate seamlessly with popular business applications and CRMs, ensuring that AI enhancements do not disrupt current workflows.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqServicesH4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqServicesC4" aria-expanded="false" aria-controls="faqServicesC4">
+                      What is "Workflow Automation"?
+                    </button>
+                  </h3>
+                  <div id="faqServicesC4" class="accordion-collapse collapse" aria-labelledby="faqServicesH4" data-bs-parent="#faqServices">
+                    <div class="accordion-body text-secondary">Workflow automation through GoAI involves mapping out repetitive manual tasks and replacing them with automated AI sequences to save time and reduce human error.</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 fw-semibold mt-4 mb-2" id="technology-security">Technology &amp; Security</h2>
+              <div class="accordion mb-4" id="faqSecurity">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqSecurityH1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSecurityC1" aria-expanded="false" aria-controls="faqSecurityC1">
+                      What kind of AI models does GoAI use?
+                    </button>
+                  </h3>
+                  <div id="faqSecurityC1" class="accordion-collapse collapse" aria-labelledby="faqSecurityH1" data-bs-parent="#faqSecurity">
+                    <div class="accordion-body text-secondary">GoAI utilizes state-of-the-art Large Language Models (LLMs) and generative AI technologies to power its agents and automation services.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqSecurityH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSecurityC2" aria-expanded="false" aria-controls="faqSecurityC2">
+                      Is my business data secure with GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqSecurityC2" class="accordion-collapse collapse" aria-labelledby="faqSecurityH2" data-bs-parent="#faqSecurity">
+                    <div class="accordion-body text-secondary">Yes. GoAI emphasizes data privacy and security, implementing protocols to ensure that business data used within the platform remains confidential and protected.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqSecurityH3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSecurityC3" aria-expanded="false" aria-controls="faqSecurityC3">
+                      Do I need coding skills to use GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqSecurityC3" class="accordion-collapse collapse" aria-labelledby="faqSecurityH3" data-bs-parent="#faqSecurity">
+                    <div class="accordion-body text-secondary">No. GoAI is built to be user-friendly, allowing business owners and managers to implement AI solutions without needing to write code.</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 fw-semibold mt-4 mb-2" id="industry-applications">Industry Applications</h2>
+              <div class="accordion mb-4" id="faqIndustry">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqIndustryH1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqIndustryC1" aria-expanded="false" aria-controls="faqIndustryC1">
+                      Which industries can benefit from GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqIndustryC1" class="accordion-collapse collapse" aria-labelledby="faqIndustryH1" data-bs-parent="#faqIndustry">
+                    <div class="accordion-body text-secondary">GoAI is versatile and serves a variety of sectors, including E-commerce, Real Estate, Marketing Agencies, and Professional Services.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqIndustryH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqIndustryC2" aria-expanded="false" aria-controls="faqIndustryC2">
+                      How does GoAI assist Marketing Agencies?
+                    </button>
+                  </h3>
+                  <div id="faqIndustryC2" class="accordion-collapse collapse" aria-labelledby="faqIndustryH2" data-bs-parent="#faqIndustry">
+                    <div class="accordion-body text-secondary">It helps agencies automate content creation, manage social media scheduling, and perform deep-dive market research and sentiment analysis.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqIndustryH3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqIndustryC3" aria-expanded="false" aria-controls="faqIndustryC3">
+                      Can GoAI help with Lead Generation?
+                    </button>
+                  </h3>
+                  <div id="faqIndustryC3" class="accordion-collapse collapse" aria-labelledby="faqIndustryH3" data-bs-parent="#faqIndustry">
+                    <div class="accordion-body text-secondary">Yes. The platform can automate the process of finding, qualifying, and reaching out to potential leads.</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 fw-semibold mt-4 mb-2" id="getting-started">Getting Started</h2>
+              <div class="accordion mb-4" id="faqGettingStarted">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGettingStartedH1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqGettingStartedC1" aria-expanded="false" aria-controls="faqGettingStartedC1">
+                      How can I start working with GoAI?
+                    </button>
+                  </h3>
+                  <div id="faqGettingStartedC1" class="accordion-collapse collapse" aria-labelledby="faqGettingStartedH1" data-bs-parent="#faqGettingStarted">
+                    <div class="accordion-body text-secondary">New clients can begin by booking a discovery call or a consultation through the website to discuss their specific business needs.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGettingStartedH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqGettingStartedC2" aria-expanded="false" aria-controls="faqGettingStartedC2">
+                      Is there a demo available?
+                    </button>
+                  </h3>
+                  <div id="faqGettingStartedC2" class="accordion-collapse collapse" aria-labelledby="faqGettingStartedH2" data-bs-parent="#faqGettingStarted">
+                    <div class="accordion-body text-secondary">The website allows users to request a demo to see the AI agents and automation workflows in action.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqGettingStartedH3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqGettingStartedC3" aria-expanded="false" aria-controls="faqGettingStartedC3">
+                      Does GoAI provide ongoing support?
+                    </button>
+                  </h3>
+                  <div id="faqGettingStartedC3" class="accordion-collapse collapse" aria-labelledby="faqGettingStartedH3" data-bs-parent="#faqGettingStarted">
+                    <div class="accordion-body text-secondary">Yes. GoAI offers ongoing maintenance and optimization to ensure that AI solutions continue to perform effectively as the business grows.</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 fw-semibold mt-4 mb-2" id="values-vision">Values &amp; Vision</h2>
+              <div class="accordion" id="faqValues">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqValuesH1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqValuesC1" aria-expanded="false" aria-controls="faqValuesC1">
+                      What makes GoAI different from other AI platforms?
+                    </button>
+                  </h3>
+                  <div id="faqValuesC1" class="accordion-collapse collapse" aria-labelledby="faqValuesH1" data-bs-parent="#faqValues">
+                    <div class="accordion-body text-secondary">GoAI focuses on "practical AI"—moving beyond simple chatbots to create integrated systems that solve real-world business bottlenecks and deliver a measurable ROI.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="faqValuesH2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqValuesC2" aria-expanded="false" aria-controls="faqValuesC2">
+                      How does GoAI approach the future of work?
+                    </button>
+                  </h3>
+                  <div id="faqValuesC2" class="accordion-collapse collapse" aria-labelledby="faqValuesH2" data-bs-parent="#faqValues">
+                    <div class="accordion-body text-secondary">GoAI views AI as a collaborator rather than a replacement, focusing on "Augmented Intelligence" where AI handles the mundane tasks so humans can focus on creative and strategic growth.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="fw-semibold">Still have questions?</div>
+                <p class="text-secondary mb-0">Reach out and we'll help you figure out the best next step for your business.</p>
+                <div class="mt-2">
+                  <a class="btn btn-primary" href="/contact/">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}
+
